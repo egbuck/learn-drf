@@ -5,6 +5,7 @@ requires-python = ">=3.13"
 [manifest]
 members = [
     "backend",
+    "frontend",
     "learn-django-rest",
     "library",
 ]
@@ -73,6 +74,11 @@ sdist = { url = "https://files.pythonhosted.org/packages/7d/97/112c5a72e6917949b
 wheels = [
     { url = "https://files.pythonhosted.org/packages/eb/3e/2448e93f4f87fc9a9f35e73e3c05669e0edd0c2526834686e949bb1fd303/djangorestframework-3.16.0-py3-none-any.whl", hash = "sha256:bea7e9f6b96a8584c5224bfb2e4348dfb3f8b5e34edbecb98da258e892089361", size = 1067305 },
 ]
+
+[[package]]
+name = "frontend"
+version = "0.1.0"
+source = { virtual = "todo/frontend" }
 
 [[package]]
 name = "learn-django-rest"
