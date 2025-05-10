@@ -1,5 +1,5 @@
 [project]
-name = "learn-django-rest"
+name = "library"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -8,6 +8,3 @@ dependencies = [
     "django==4.2",
     "djangorestframework>=3.16.0",
 ]
-
-[tool.uv.workspace]
-members = ["library"]
