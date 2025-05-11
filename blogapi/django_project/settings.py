@@ -138,7 +138,9 @@ AUTH_USER_MODEL  = "accounts.CustomUser"
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         # Allow unrestricted access regardless of authentication - NOT FOR PRODUCTION
-        "rest_framework.permissions.AllowAny",
+        # "rest_framework.permissions.AllowAny",
+        # Allow only authenticated users to access the API
+        "rest_framework.permissions.IsAuthenticated",
     ],
 }
 
