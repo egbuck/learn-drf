@@ -19,6 +19,15 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # API urls
     path('api/v1/', include('posts.urls')),
+    # API authentication
     path("api-auth/", include("rest_framework.urls")),
+    # CORS - authentication
+    path("api/v1/dj-rest-auth/", include("dj_rest_auth.urls")),
+    # Allauth - registration
+    path(
+        "api/v1/dj-rest-auth/registration/",
+        include("dj_rest_auth.registration.urls")
+    ),
 ]
