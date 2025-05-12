@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "dj_rest_auth",
     "dj_rest_auth.registration",
+    "drf_spectacular",
     # Local
     'accounts',
     'posts',
@@ -162,6 +163,7 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.SessionAuthentication", # For Browsable API
         "rest_framework.authentication.TokenAuthentication",
     ],
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema", # For drf-spectacular api docs
 }
 
 # Define the CORS allowed origins and CSRF trusted origins
@@ -170,3 +172,11 @@ CORS_ALLOWED_ORIGINS = (
     "http://localhost:8000",  # default Django port
 )
 CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
+
+# DRF Spectacular settings (for API documentation)
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Blog API Project",
+    "DESCRIPTION": "A sample blog to learn about DRF",
+    "VERSION": "1.0.0",
+    # OTHER SETTINGS
+}
